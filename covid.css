@@ -1,0 +1,89 @@
+body{
+  background-color: black;
+  border: 5px solid plum;
+}
+
+@keyframes moveWord {
+  0% {
+    transform: translateX(0); /* Start position */
+  }
+  50% {
+    transform: translateX(500px); /* Midway position */
+  }
+  100% {
+    transform: translateX(1000px); /* End position */
+  }
+}
+
+
+h1{
+  margin-left: 150px ;
+  animation: moveWord 10s infinite linear; /* Apply the animation with desired duration and timing function */
+  margin-bottom: 20px;
+  color: white;
+}
+h2:hover{
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1.4); 
+}
+
+h2{
+  color: white;
+  text-align: center;
+}
+
+.card{
+  
+  width: 25%;
+  height: auto;
+  background-color: plum;
+  margin-right: 60px;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  margin-left: 40px;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li {
+  list-style: none;
+}
+ul li {
+  transition: transform 0.3s ease-in-out; /* Define the transition property with desired duration and easing */
+  border: 5px solid plum;
+}
+
+ul li:hover {
+  transform: scale(1.1); /*  size  or  Apply the transformation on hover, in this case, scale up the item */
+  background-color: white;
+  font-weight: bolder;
+  color: black;
+}
+
+.card__inner {
+    /* inside box the content*/
+    color: black;
+    display: flex;
+    flex-direction: column; /* so that content can be below each other or column wise*/
+    align-items: center;
+    font-family:sans-serif;
+
+  }
+  .card__inner span{
+    font-size: 15px;
+  }
+  
+  .card__name {
+    font-size: 25px;
+    
+    margin-bottom: 5px; /* Decrease the margin-bottom value to reduce spacing */
+  }
+  
+  .card__total {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 5px;
+  }
